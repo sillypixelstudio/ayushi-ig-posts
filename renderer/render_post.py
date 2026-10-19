@@ -59,10 +59,8 @@ html,body{{margin:0;background:#fff}}
 em.k{{font-style:italic;color:#3d3fcc}} p{{margin:0}}
 {css}
 </style></head><body><div class="s">
-<div class="l" style="top:92px;left:96px">How I Think</div>
-<div class="l" style="top:92px;right:96px">Nº {i:02d} / {total:02d}</div>
+<div class="l" style="top:92px;left:96px">Nº {i:02d} / {total:02d}</div>
 <div class="rule" style="top:140px"></div><div class="rule" style="bottom:140px"></div>
-<div class="l" style="bottom:92px;left:96px">Ayushi Jain</div>
 <div class="l" style="bottom:92px;right:96px">{right}</div>
 {body}
 </div></body></html>"""
@@ -75,10 +73,10 @@ def hit_pages(spec):
     h = '<br>'.join(html.escape(l) if k < len(lines) - 1 else '<em style="font-style:italic">%s</em>' % html.escape(l) for k, l in enumerate(lines))
     out = [hit_page(1, total, ".h{position:absolute;left:92px;right:92px;bottom:250px;font-family:'Instrument Serif';font-size:150px;line-height:.98;letter-spacing:-3px;color:#fff}", f'<div class="h">{h}</div>', cover=True)]
     textcss = ".t{position:absolute;left:96px;right:110px;top:140px;bottom:140px;display:flex;flex-direction:column;justify-content:center;font-family:'Newsreader';font-size:50px;line-height:1.34;letter-spacing:-.4px;color:#111;text-wrap:pretty}.t p+p{margin-top:44px}"
-    quotecss = ".qa{position:absolute;left:96px;right:110px;top:260px;font-family:'Newsreader';font-size:40px;color:#444;line-height:1.3}.qq{position:absolute;left:96px;right:96px;top:480px;font-family:'Instrument Serif';font-style:italic;font-size:118px;line-height:1;letter-spacing:-2px;color:#3d3fcc}.qc{position:absolute;left:96px;right:110px;top:1000px;font-family:'Newsreader';font-size:40px;color:#444;line-height:1.3}"
+    quotecss = ".qa{position:absolute;left:96px;right:110px;top:365px;font-family:'Newsreader';font-size:40px;color:#444;line-height:1.3}.qq{position:absolute;left:96px;right:96px;top:550px;font-family:'Instrument Serif';font-style:italic;font-size:118px;line-height:1;letter-spacing:-2px;color:#3d3fcc}.qc{position:absolute;left:96px;right:110px;top:870px;font-family:'Newsreader';font-size:40px;color:#444;line-height:1.3}"
     for n, s in enumerate(slides, start=2):
         if s.get('type') == 'quote':
-            body = f'<div class="qa">{html.escape(s["setup"])}</div><div class="qq">{html.escape(s["quote"])}</div><div class="qc">{html.escape(s["follow"])}</div>'
+            body = f'<div class="qa">{html.escape(s["setup"])}</div><div class="qq">{html.escape(s["quote"]).replace(chr(10),"<br>")}</div><div class="qc">{html.escape(s["follow"])}</div>'
             out.append(hit_page(n, total, quotecss, body))
         else:
             body = '<div class="t">' + ''.join(f'<p>{hit_key(p)}</p>' for p in s['p']) + '</div>'

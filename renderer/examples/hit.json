@@ -1,0 +1,51 @@
+{
+ "format": "hit",
+ "cover": [
+  "The shop with",
+  "the ugly sign",
+  "is the one I trust."
+ ],
+ "slides": [
+  {
+   "type": "text",
+   "p": [
+    "We are taught that a good brand looks polished, with a clean logo, a tidy shelf and matching colours.",
+    "[[Polish is easy to buy]], so it proves very little about whether anyone will return."
+   ]
+  },
+  {
+   "type": "text",
+   "p": [
+    "Near an old city market, a sweet shop has a hand-painted board with one letter faded.",
+    "A queue forms outside it every evening, while [[the glass-front bakery]] next door stays quiet."
+   ]
+  },
+  {
+   "type": "text",
+   "p": [
+    "The brands I have seen last longest were easy to describe to a friend in one sentence.",
+    "[[The look]] usually arrived after that, and rarely decided anything."
+   ]
+  },
+  {
+   "type": "text",
+   "p": [
+    "A brand audit scores logos, colours and consistency, because those are easy to measure.",
+    "[[Trust builds slowly]] through habit, and habit is hard to put in a score."
+   ]
+  },
+  {
+   "type": "quote",
+   "setup": "Before paying for a new logo, ask yourself",
+   "quote": "Would they miss us tomorrow?",
+   "follow": "That answer is worth more than a new typeface."
+  },
+  {
+   "type": "text",
+   "p": [
+    "At six in the evening the faded board is lit by a single bulb.",
+    "[[The queue]] is already around the corner."
+   ]
+  }
+ ]
+}
